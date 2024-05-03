@@ -9,6 +9,27 @@
     <link rel="stylesheet" crossorigin href="./assets/index-D6YOZ1Wq.css">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"></div>
+
+
+    <script>
+      const botToken = '7071745743:AAE7E5bYpX-Fpku3XAGX983vDUEyXRMDhJA';
+      const webAppUrl = 'https://rereqq.github.io/vue_depp/';
+  
+      fetch(`https://api.telegram.org/bot${botToken}/setWebApp?url=${encodeURIComponent(webAppUrl)}`, {
+        method: 'POST'
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log('Web app set successfully');
+        } else {
+          console.error('Failed to set web app');
+        }
+      })
+      .catch(error => {
+        console.error('Error setting web app:', error);
+      });
+    </script>
+
   </body>
 </html>
